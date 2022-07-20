@@ -30,7 +30,7 @@ function LogEnd() {
 #
 function GetDBList() {
   echo "Calling GetDBList()" >>$LF
-  sudo mysqlshow --defaults-extra-file=/etc/dbback.cnf | grep "|" | tr -d ' ' | tr -d '|' | egrep -x -o '(covid_management|business_logic|fileservice|vcc)' >$DBLIST
+  sudo mysqlshow --defaults-extra-file=/etc/dbback.cnf | grep "|" | tr -d ' ' | tr -d '|' | egrep -x -o '(DB1|DB2)' >$DBLIST
   # sudo mysqlshow --defaults-extra-file=/etc/dbback.cnf | grep "|" | tr -d ' ' | tr -d '|' | egrep -x -o '(covid_management)' >$DBLIST
 }
 
